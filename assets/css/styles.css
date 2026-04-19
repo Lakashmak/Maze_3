@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Цвет фона страницы */
+    margin: 0;
+    overscroll-behavior: none;
+}
+
+p {
+    white-space: pre-wrap;
+    color: #ffffff;
+    cursor: default;
+	text-decoration: none;
+}
+
+.container > p {
+    position: absolute;
+    z-index: 1;
+}
+
+.container > p:nth-child(2):hover {
+    text-decoration: underline;
+}
+
+.menu {
+	position: absolute;
+	/* display: block; */
+	top: 0;
+    left: -220px;
+	width: 200px;
+	background-color: #333333;
+	border: 5px solid #777777;
+	z-index: 2;
+	padding-left: 10px;
+	float: left;
+	transform: translateX(-220px);
+	transition-property: all;
+	transition-duration: 0.3s;
+}
+
+.menu > p:nth-child(1):hover {
+    text-decoration: underline;
+}
+
+.menu > p:nth-child(7):hover {
+    text-decoration: underline;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-grow: 1; /* Канвас занимает оставшееся пространство */
+    /*background-color: #ffffff; /* Цвет фона канваса */
+    z-index: 0;
+}
